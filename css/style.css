@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #FF800F;
+    --primary: #ff7b0f;
     --secondary: #001064;
     --light: #F6F7F8;
     --dark: #010A35;
@@ -70,7 +70,7 @@
 .btn-square,
 .btn-sm-square,
 .btn-lg-square {
-    padding: 0;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -206,7 +206,7 @@
 
 /*** Facts ***/
 .facts {
-    background: rgba(1, 10, 53, .8);
+    background: rgb(65 65 66 / 80%);
 }
 
 
