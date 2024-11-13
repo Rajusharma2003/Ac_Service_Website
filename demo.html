@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Feedback</title>
+  <link rel="stylesheet" href="styles.css">
+
+        <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <!-- <link href="lib/animate/animate.min.css" rel="stylesheet"> -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<style>
+    /* Basic reset and styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+   background-color: #363636;
+}
+
+/* Feedback Section */
+.feedback-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.feedback-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Carousel Styling */
+.feedback-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  min-height: 150px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.feedback-card p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.feedback-card h3 {
+  font-size: 1rem;
+  color: #888;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  background: #333;
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 0 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background: #555;
+}
+
+.carousel-btn:focus {
+  outline: none;
+}
+
+/* Responsive Styling */
+@media (max-width: 500px) {
+  .feedback-card {
+    width: 80%;
+  }
+}
+
+</style>
+<body>
+
+     <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <h1 class="m-0"><img class="img-fluid me-3" src="img/icon/icon-02-primary.pngs" alt="">logo</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto bg-light pe-4 py-3 py-lg-0">
+                <a href="#" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="service.html" class="nav-item nav-link">Our Services</a>
+                <!-- <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu bg-light border-0 m-0">
+                        <a href="feature.html" class="dropdown-item">Features</a>
+                        <a href="quote.html" class="dropdown-item">Free Quote</a>
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div> -->
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+            </div>
+            <div class="h-100 d-lg-inline-flex align-items-center d-none">
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+<!-- 
+  <section class="feedback-section">
+    <h2>What Our Customers Say</h2>
+    <div class="feedback-carousel">
+      <button class="carousel-btn prev" onclick="prevFeedback()">&#10094;</button>
+      <div class="feedback-card" id="feedback-card">
+        <p id="feedback-text">"Amazing service and great quality products. Highly recommend!"</p>
+        <h3 id="feedback-name">- John Doe</h3>
+      </div>
+      <button class="carousel-btn next" onclick="nextFeedback()">&#10095;</button>
+    </div>
+  </section> -->
+
+  <script>
+    // Customer feedback data
+const feedbacks = [
+  {
+    text: "Amazing service and great quality products. Highly recommend!",
+    name: "- John Doe"
+  },
+  {
+    text: "Fast delivery and excellent customer support. Loved the experience!",
+    name: "- Jane Smith"
+  },
+  {
+    text: "The product quality exceeded my expectations. Five stars!",
+    name: "- Mike Johnson"
+  }
+];
+
+// Track the current feedback index
+let currentFeedbackIndex = 0;
+
+// Function to update feedback content
+function updateFeedback() {
+  const feedbackText = document.getElementById("feedback-text");
+  const feedbackName = document.getElementById("feedback-name");
+
+  feedbackText.textContent = feedbacks[currentFeedbackIndex].text;
+  feedbackName.textContent = feedbacks[currentFeedbackIndex].name;
+}
+
+// Show the next feedback
+function nextFeedback() {
+  currentFeedbackIndex = (currentFeedbackIndex + 1) % feedbacks.length;
+  updateFeedback();
+}
+
+// Show the previous feedback
+function prevFeedback() {
+  currentFeedbackIndex = (currentFeedbackIndex - 1 + feedbacks.length) % feedbacks.length;
+  updateFeedback();
+}
+
+// Initialize with the first feedback
+updateFeedback();
+
+  </script>
+</body>
+</html>
