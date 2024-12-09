@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #ff7b0f;
+    --primary: #3ba0d6;
     --secondary: #001064;
     --light: #F6F7F8;
     --dark: #010A35;
@@ -43,8 +43,8 @@
 }
 
 .btn.btn-primary:hover {
-    background: var(--secondary);
-    border-color: var(--secondary);
+    background: var(--primary);
+    border-color: var(--primary);
 }
 
 .btn.btn-secondary:hover {
@@ -85,7 +85,8 @@
 }
 
 .navbar .navbar-brand img {
-    max-height: 70px;
+    max-height: 87px;
+    width: 190px;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -112,7 +113,8 @@
 
 @media (max-width: 991.98px) {
     .navbar .navbar-brand img {
-        max-height: 50px;
+        max-height: 70px;
+        width: 100px;
     }
 
     .navbar .navbar-nav {
